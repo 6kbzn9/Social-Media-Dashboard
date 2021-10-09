@@ -56,11 +56,6 @@ body {
   font-family: "Inter", sans-serif;
   background-color: var(--BG);
   transition: 250ms ease-in-out;
-  @include bigger(1300px) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 }
 
 .wrapper {
@@ -68,9 +63,6 @@ body {
   max-width: 1125px;
   margin: 0 auto;
   padding: 4rem 0;
-  @include bigger(1300px) {
-    padding: 0;
-  }
 }
 
 .header {

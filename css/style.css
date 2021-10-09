@@ -53,31 +53,11 @@ body {
   transition: 250ms ease-in-out;
 }
 
-@media (min-width: 1300px) {
-  body {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
 .wrapper {
   width: 90%;
   max-width: 1125px;
   margin: 0 auto;
   padding: 4rem 0;
-}
-
-@media (min-width: 1300px) {
-  .wrapper {
-    padding: 0;
-  }
 }
 
 .header {
