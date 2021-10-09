@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -12,14 +11,31 @@
       href="./images/favicon-32x32.png"
     />
 
-    <title>Frontend Mentor | [Social Media Dashboard]</title>
+    <title>Frontend Mentor | Social Media Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    Social Media Dashboard Total Followers: 23,004 Dark Mode @nathanf 1987
-    Followers 12 Today @nathanf 1044 Followers 99 Today @realnathanf 11k
-    Followers 1099 Today Nathan F. 8239 Subscribers 144 Today Overview - Today
-    Page Views 87 3% Likes 52 2% Likes 5462 2257% Profile Views 52k 1375%
-    Retweets 117 303% Likes 507 553% Likes 107 19% Total Views 1407 12%
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__head">
+          <h2 class="header__title">Social Media Dashboard</h2>
+          <p class="header__subtitle">Total Followers: 23,004</p>
+        </div>
+        <div class="header__theme">
+          <p class="header__label">Dark Mode</p>
+          <div class="header__switch" id="toggle"></div>
+        </div>
+      </header>
+    </div>
+    @nathanf 1987 Followers 12 Today @nathanf 1044 Followers 99 Today
+    @realnathanf 11k Followers 1099 Today Nathan F. 8239 Subscribers 144 Today
+    Overview - Today Page Views 87 3% Likes 52 2% Likes 5462 2257% Profile Views
+    52k 1375% Retweets 117 303% Likes 507 553% Likes 107 19% Total Views 1407
+    12%
+    <script src="main.js"></script>
   </body>
 </html>

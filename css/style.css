@@ -1,0 +1,122 @@
+:root {
+  --limegreen: hsl(163, 72%, 41%);
+  --brightred: hsl(356, 69%, 56%);
+  --facebook: hsl(208, 92%, 53%);
+  --twitter: hsl(203, 89%, 53%);
+  --instagram: linear-gradient (hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  --youtube: hsl(348, 97%, 39%);
+  --Toggle: hsl(230, 22%, 74%);
+  --BG: hsl(0, 0%, 100%);
+  --TopBGPattern: hsl(225, 100%, 98%);
+  --CardBG: hsl(227, 47%, 96%);
+  --Text: hsl(228, 12%, 44%);
+  --Text-2: hsl(230, 17%, 14%);
+}
+
+[data-theme="dark"] {
+  --Toggle: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  --BG: hsl(230, 17%, 14%);
+  --TopBGPattern: hsl(232, 19%, 15%);
+  --CardBG: hsl(228, 28%, 20%);
+  --Text: hsl(228, 34%, 66%);
+  --Text-2: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Inter", sans-serif;
+  background-color: var(--BG);
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+.header__head {
+  padding-bottom: 2rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--Text);
+}
+
+.header__title {
+  font-size: 2.625rem;
+  color: var(--Text-2);
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+}
+
+.header__subtitle {
+  color: var(--Text);
+  font-weight: 700;
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+}
+
+.header__theme {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__label {
+  color: var(--Text);
+  font-weight: 700;
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+}
+
+.header__switch {
+  position: relative;
+  width: 5rem;
+  height: 2.5rem;
+  background: var(--Toggle);
+  border-radius: 2rem;
+  cursor: pointer;
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+}
+
+.header__switch::after {
+  content: "";
+  position: absolute;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: 5px;
+  background-color: var(--TopBGPattern);
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+}
+
+.header__switch.dark::after {
+  right: calc(100% - 1.75rem - 5px);
+}
+/*# sourceMappingURL=style.css.map */
