@@ -3,7 +3,7 @@
   --brightred: hsl(356, 69%, 56%);
   --facebook: hsl(208, 92%, 53%);
   --twitter: hsl(203, 89%, 53%);
-  --instagram: linear-gradient (hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  --instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
   --youtube: hsl(348, 97%, 39%);
   --Toggle: hsl(230, 22%, 74%);
   --BG: hsl(0, 0%, 100%);
@@ -33,6 +33,18 @@ html {
   font-size: 62.5%;
 }
 
+@media (max-width: 350px) {
+  html {
+    font-size: 59%;
+  }
+}
+
+@media (max-width: 325px) {
+  html {
+    font-size: 56%;
+  }
+}
+
 body {
   font-size: 1.6rem;
   font-family: "Inter", sans-serif;
@@ -43,18 +55,40 @@ body {
 
 .wrapper {
   width: 90%;
+  max-width: 1125px;
   margin: 0 auto;
   padding: 4rem 0;
 }
 
 .header {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 650px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .header__head {
   padding-bottom: 2rem;
   margin-bottom: 1.25rem;
   border-bottom: 1px solid var(--Text);
+}
+
+@media (min-width: 650px) {
+  .header__head {
+    border: none;
+    padding-bottom: 0;
+  }
 }
 
 .header__title {
@@ -67,6 +101,7 @@ body {
 .header__subtitle {
   color: var(--Text);
   font-weight: 700;
+  font-size: 1.5rem;
   -webkit-transition: 250ms ease-in-out;
   transition: 250ms ease-in-out;
 }
@@ -86,8 +121,15 @@ body {
 .header__label {
   color: var(--Text);
   font-weight: 700;
+  font-size: 1.5rem;
   -webkit-transition: 250ms ease-in-out;
   transition: 250ms ease-in-out;
+}
+
+@media (min-width: 650px) {
+  .header__label {
+    margin-right: 1rem;
+  }
 }
 
 .header__switch {
@@ -118,5 +160,143 @@ body {
 
 .header__switch.dark::after {
   right: calc(100% - 1.75rem - 5px);
+}
+
+.social {
+  width: 100%;
+}
+
+@media (min-width: 650px) {
+  .social {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 2rem;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1000px) {
+  .social {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .social {
+    grid-gap: 2.5rem;
+  }
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--CardBG);
+  text-align: center;
+  padding: 3.5rem 0 3rem;
+  overflow: hidden;
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+}
+
+.card:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 650px) {
+  .card:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+
+.card__top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+}
+
+.card__top--fb {
+  background: var(--facebook);
+}
+
+.card__top--tw {
+  background: var(--twitter);
+}
+
+.card__top--in {
+  background: var(--instagram);
+}
+
+.card__top--yt {
+  background: var(--youtube);
+}
+
+.card__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2.75rem;
+}
+
+.card__image {
+  margin-right: 1rem;
+}
+
+.card__name {
+  color: var(--Text);
+  font-weight: 700;
+  font-size: 1.325rem;
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+}
+
+.card__followers {
+  font-size: 5.5rem;
+  color: var(--Text-2);
+  margin-bottom: 2.25rem;
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+}
+
+.card__followers span {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: var(--Text);
+}
+
+.card__today {
+  color: var(--limegreen);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.card__today--red {
+  color: var(--brightred);
+}
+
+.card__today img {
+  margin-right: 0.5rem;
 }
 /*# sourceMappingURL=style.css.map */
