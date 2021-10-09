@@ -164,6 +164,7 @@ body {
 
 .social {
   width: 100%;
+  margin-bottom: 5rem;
 }
 
 @media (min-width: 650px) {
@@ -297,6 +298,84 @@ body {
 }
 
 .card__today img {
+  margin-right: 0.5rem;
+}
+
+.overview__title {
+  color: var(--Text);
+  font-size: 2.625rem;
+  margin-bottom: 3rem;
+}
+
+.overview__card {
+  background-color: var(--CardBG);
+  border-radius: 5px;
+  padding: 2.5rem 3rem;
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+}
+
+.overview__card:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.overview__card__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 2.75rem;
+}
+
+.overview__card__title {
+  color: var(--Text);
+  font-weight: 700;
+  font-size: 1.4rem;
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+}
+
+.overview__card__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.overview__card__content {
+  color: var(--Text-2);
+  font-size: 3.25rem;
+  -webkit-transition: 250ms ease-in-out;
+  transition: 250ms ease-in-out;
+}
+
+.overview__card__updated {
+  color: var(--limegreen);
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.overview__card__updated--red {
+  color: var(--brightred);
+}
+
+.overview__card__updated img {
   margin-right: 0.5rem;
 }
 /*# sourceMappingURL=style.css.map */
